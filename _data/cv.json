@@ -1,68 +1,103 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Zhixing You",
+    "email": "zhixingy121@gmail.com",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://zhixing-you.github.io",
+    "summary": "Postdoctoral research fellow in mathematics at Einstein Institute of Mathematics, The Hebrew University of Jerusalem. Research interests in set theory and mathematical logic.",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
+      "address": "Edmond J. Safra Campus, Givat Ram",
+      "postalCode": "91904",
+      "city": "Jerusalem",
+      "countryCode": "IL",
       "region": ""
     },
     "profiles": [
       {
         "network": "Google Scholar",
         "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://scholar.google.com/citations?user=B_DTCdcAAAAJ&hl=en"
       },
       {
         "network": "ORCID",
         "username": "",
-        "url": "http://orcid.org/yourorcidurl"
+        "url": "https://orcid.org/0009-0003-8905-8056"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "Zhixing-You",
+        "url": "https://github.com/Zhixing-You"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "Einstein Institute of Mathematics, The Hebrew University of Jerusalem",
+      "position": "Postdoctoral researcher",
+      "website": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "Postdoctoral research fellow. Advisor: Yair Hayut",
+      "highlights": []
+    },
+    {
+      "company": "Bar-Ilan University",
+      "position": "Postdoctoral researcher",
+      "website": "",
+      "startDate": "2022-07",
+      "endDate": "",
+      "summary": "Postdoctoral research fellow. Advisor: Assaf Rinot",
+      "highlights": []
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "institution": "Academy of Mathematics and Systems Science, Chinese Academy of Sciences",
+      "area": "Ph.D. in Mathematics",
+      "studyType": "Doctorate",
+      "startDate": "2016-09",
+      "endDate": "2022-06",
       "gpa": null,
-      "courses": []
+      "courses": [],
+      "summary": "Joint program with University of Barcelona (Oct. 2020 – Dec. 2021). Advisors: Joan Bagaria, Liuzhen Wu and Jiachen Yuan"
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "institution": "Nankai University",
+      "area": "B.G.S. in Mathematics and Biology",
+      "studyType": "Bachelor",
+      "startDate": "2012-09",
+      "endDate": "2016-07",
       "gpa": null,
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
+  "skills": [
+    {
+      "name": "Mathematics",
+      "level": "",
+      "keywords": ["Set Theory", "Mathematical Logic", "Forcing", "Large Cardinals"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Professional"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Native"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Set Theory",
+      "keywords": []
+    },
+    {
+      "name": "Mathematical Logic",
+      "keywords": []
+    }
+  ],
   "references": [],
   "publications": [
     {
@@ -140,13 +175,16 @@
       "description": ""
     }
   ],
-  "portfolio": [
+  "portfolio": [],
+  "service": [
     {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "organization": "Archive for Mathematical Logic",
+      "position": "Reviewer",
+      "website": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "Reviewer of Archive for Mathematical Logic",
+      "highlights": []
     }
   ]
 }

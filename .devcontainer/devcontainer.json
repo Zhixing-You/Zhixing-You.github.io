@@ -1,15 +1,24 @@
 {
-    "name": "ACADEMIC PAGES",
-    "dockerComposeFile": "../docker-compose.yaml",
-    "service": "jekyll-site",
-    "remoteEnv": {
-        "VSCODE_SERVER_DIR": "/home/vscode/.vscode-server"
+    "name": "Jekyll Site (Fixed)",
+    // 使用微软官方维护的 Jekyll 镜像，内置了 git, curl, ruby 等所有工具
+    "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+    
+    // 自动安装依赖
+    "postCreateCommand": "bundle install",
+    
+    // 端口转发
+    "forwardPorts": [4000],
+    
+    // 移除之前的 dockerCompose 引用，直接使用上面的 image
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.vscode-pull-request-github",
+                "jekyll-codespaces.jekyll-syntax-support"
+            ]
+        }
     },
-    "runArgs": [
-        "--user",
-        "1000:1000"
-    ],
-    "workspaceFolder": "/usr/src/app",
-    "remoteUser": "vscode",
-    "forwardPorts": [4000] // Add port forwarding
+    
+    // 这里的 remoteUser 必须是 vscode，因为上面的镜像里默认用户就是 vscode
+    "remoteUser": "vscode"
 }

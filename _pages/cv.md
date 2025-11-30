@@ -11,35 +11,31 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Mathematics, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Sep. 2016 – Jun. 2022
+  * Joint program with University of Barcelona (Oct. 2020 – Dec. 2021)
+  * Advisors: Joan Bagaria, Liuzhen Wu and Jiachen Yuan
+* B.G.S. in Mathematics and Biology, Nankai University, Sep. 2012 – Jul. 2016
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Postdoctoral researcher, Einstein Institute of Mathematics, The Hebrew University of Jerusalem, present
+  * Advisor: Yair Hayut
+  * Research in set theory and mathematical logic
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Postdoctoral researcher, Bar-Ilan University, Jul. 2022 – 
+  * Advisor: Assaf Rinot
+  * Research in set theory and mathematical logic
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+Projects
+======
+* Joint PhD student at University of Barcelona, China Scholarship Council (Oct. 2020 – Dec. 2021)
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Set Theory
+* Mathematical Logic
+* Forcing
+* Large Cardinals
 
 Publications
 ======
@@ -61,4 +57,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Reviewer of Archive for Mathematical Logic

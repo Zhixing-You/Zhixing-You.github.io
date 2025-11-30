@@ -9,13 +9,13 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "Zhixing You"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : "https://github.com/Zhixing-You/Zhixing-You.github.io"https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+name                     : &name "Zhixing You"
+description              : &description "Postdoctoral researcher in mathematics at Bar-Ilan University"
+url                      : "https://zhixing-you.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "Zhixing-You/Zhixing-You.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -25,11 +25,11 @@ author:
   avatar           : "zhixing.png"
   name             : "Zhixing You"
   pronouns         : # example: "she/her"  
-  bio              : ""
-  location         : "Ramat Gan, Israel"
-  employer         : "Bar-Ilan University"
-  uri              : "https://github.com/Zhixing-You/Zhixing-You.github.io"
-  email            : "none@example.org" 
+  bio              : "Postdoctoral research fellow in mathematics at Einstein Institute of Mathematics, The Hebrew University of Jerusalem. Research interests in set theory and mathematical logic."
+  location         : "Jerusalem, Israel"
+  employer         : "Einstein Institute of Mathematics, The Hebrew University of Jerusalem"
+  uri              : "https://zhixing-you.github.io"
+  email            : "zhixingy121@gmail.com" 
 
   # Academic websites
   academia         : # URL
@@ -46,7 +46,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/Zhixing-You/Zhixing-You.github.io"
+  github           : "https://github.com/Zhixing-You"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
