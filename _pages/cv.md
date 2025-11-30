@@ -18,10 +18,10 @@ Education
 
 Work experience
 ======
-* Postdoctoral researcher, Einstein Institute of Mathematics, The Hebrew University of Jerusalem, present
+* Postdoctoral researcher, Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Oct. 2025 – present
   * Advisor: Yair Hayut
 
-* Postdoctoral researcher, Bar-Ilan University, Jul. 2022 – (previous position)
+* Postdoctoral researcher, Bar-Ilan University, Jul. 2022 – Sep. 2025
   * Advisor: Assaf Rinot
 
 Skills

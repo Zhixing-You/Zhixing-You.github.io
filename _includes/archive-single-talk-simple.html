@@ -6,8 +6,8 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="talk-item" style="margin-bottom: 1.5em; padding-bottom: 1em; border-bottom: 1px solid #e0e0e0;">
-  <div class="talk-title" style="font-size: 1.1em; font-weight: bold; margin-bottom: 0.3em;">
+<div class="talk-item">
+  <div class="talk-title" style="font-size: 1.05em; font-weight: bold; margin-bottom: 0.2em;">
     {% if post.link %}
       <a href="{{ post.link }}" style="color: #1a0dab; text-decoration: none;">{{ title }}</a>
     {% elsif post.paperurl %}
@@ -17,9 +17,9 @@
     {% endif %}
   </div>
   
-  <div class="talk-details" style="color: #666; font-size: 0.95em; line-height: 1.6;">
+  <div class="talk-details" style="color: #666; font-size: 0.9em; line-height: 1.4;">
     {% if post.venue %}
-      <div style="margin-bottom: 0.2em;">
+      <div style="margin-bottom: 0.1em;">
         <span style="font-style: italic;">{{ post.venue }}</span>
         {% if post.location %}
           <span>, {{ post.location }}</span>
@@ -30,20 +30,22 @@
       </div>
     {% endif %}
     
-    <div class="talk-links" style="margin-top: 0.3em;">
-      {% if post.paperurl %}
-        {% if post.paperurl contains 'arxiv' %}
-          <a href="{{ post.paperurl }}" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">arXiv</a>
-        {% elsif post.paperurl contains 'doi' %}
-          <a href="{{ post.paperurl }}" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">DOI</a>
-        {% else %}
-          <a href="{{ post.paperurl }}" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">Paper</a>
+    {% if post.paperurl or post.link %}
+      <div class="talk-links" style="margin-top: 0.2em; font-size: 0.85em;">
+        {% if post.paperurl %}
+          {% if post.paperurl contains 'arxiv' %}
+            <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[arXiv]</a>
+          {% elsif post.paperurl contains 'doi' %}
+            <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[DOI]</a>
+          {% else %}
+            <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[Paper]</a>
+          {% endif %}
         {% endif %}
-      {% endif %}
-      {% if post.link %}
-        <a href="{{ post.link }}" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">Event</a>
-      {% endif %}
-    </div>
+        {% if post.link %}
+          <a href="{{ post.link }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[Event]</a>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 </div>
 
