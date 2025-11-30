@@ -8,8 +8,15 @@ author_profile: true
 {% include base_path %}
 
 <div style="max-width: 900px;">
+  {% assign pub_count = 0 %}
   {% for post in site.publications reversed %}
-    {% include archive-single-publication.html %}
+    {% assign pub_count = pub_count | plus: 1 %}
+    <div style="display: flex; margin-bottom: 0.6em; padding-bottom: 0.6em; border-bottom: 1px solid #e0e0e0;">
+      <div style="min-width: 25px; margin-right: 8px; color: #666; font-weight: bold; padding-top: 2px;">{{ pub_count }}.</div>
+      <div style="flex: 1;">
+        {% include archive-single-publication.html %}
+      </div>
+    </div>
   {% endfor %}
 </div>
 

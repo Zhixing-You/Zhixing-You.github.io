@@ -6,8 +6,8 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="publication-item" style="margin-bottom: 1.5em; padding-bottom: 1em; border-bottom: 1px solid #e0e0e0;">
-  <div class="publication-title" style="font-size: 1.1em; font-weight: bold; margin-bottom: 0.3em;">
+<div class="publication-item">
+  <div class="publication-title" style="font-size: 1.05em; font-weight: bold; margin-bottom: 0.2em;">
     {% if post.paperurl %}
       <a href="{{ post.paperurl }}" style="color: #1a0dab; text-decoration: none;">{{ title }}</a>
     {% else %}
@@ -15,10 +15,10 @@
     {% endif %}
   </div>
   
-  <div class="publication-details" style="color: #666; font-size: 0.95em; line-height: 1.6;">
+  <div class="publication-details" style="color: #666; font-size: 0.9em; line-height: 1.4;">
     {% if post.citation %}
       {% assign clean_citation = post.citation | replace: '<a href="', '' | replace: '">DOI:', ' (DOI:' | replace: '</a>', ')' | replace: '<i>', '' | replace: '</i>', '' | replace: '&quot;', '"' | replace: '&amp;', '&' %}
-      <div style="margin-bottom: 0.3em;">{{ clean_citation }}</div>
+      <div style="margin-bottom: 0.2em;">{{ clean_citation }}</div>
     {% else %}
       {% if post.venue %}
         <span style="font-style: italic;">{{ post.venue }}</span>
@@ -28,7 +28,7 @@
       {% endif %}
     {% endif %}
     
-    <div class="publication-links" style="margin-top: 0.3em; font-size: 0.9em;">
+    <div class="publication-links" style="margin-top: 0.2em; font-size: 0.85em;">
       {% if post.paperurl %}
         {% if post.doi %}
           <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[DOI]</a>
