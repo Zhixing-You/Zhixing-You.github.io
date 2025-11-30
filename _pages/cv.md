@@ -22,7 +22,7 @@ Work experience
   * Advisor: Yair Hayut
   * Research in set theory and mathematical logic
 
-* Postdoctoral researcher, Bar-Ilan University, Jul. 2022 – 
+* Postdoctoral researcher, Bar-Ilan University, Jul. 2022 – (previous position)
   * Advisor: Assaf Rinot
   * Research in set theory and mathematical logic
 
