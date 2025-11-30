@@ -6,42 +6,77 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="publication-item">
-  <div class="publication-title" style="font-size: 1.05em; font-weight: bold; margin-bottom: 0.2em;">
-    {% if post.paperurl %}
-      <a href="{{ post.paperurl }}" style="color: #1a0dab; text-decoration: none;">{{ title }}</a>
-    {% else %}
-      <a href="{{ base_path }}{{ post.url }}" style="color: #1a0dab; text-decoration: none;">{{ title }}</a>
-    {% endif %}
-  </div>
+{% comment %} Extract author and year from citation {% endcomment %}
+{% if post.citation %}
+  {% assign citation_no_html = post.citation | replace: '<a href="', '' | replace: '">', ' ' | replace: '</a>', '' | replace: '<i>', '' | replace: '</i>', '' | replace: '&quot;', '"' | replace: '&amp;', '&' %}
+  {% comment %} Find the part with author and year (before the title in quotes) {% endcomment %}
+  {% assign title_quoted = title | prepend: '"' | append: '"' %}
+  {% assign citation_before_title = citation_no_html | split: title_quoted | first | strip %}
+  {% comment %} Remove trailing period and clean up {% endcomment %}
+  {% assign author_year = citation_before_title | replace: '.', '' | strip %}
+{% else %}
+  {% assign author_year = '' %}
+  {% if post.date %}
+    {% assign author_year = post.date | date: "(%Y)" %}
+  {% endif %}
+{% endif %}
+
+<div class="publication-item" style="font-size: 0.95em; line-height: 1.6;">
+  {% comment %} Title {% endcomment %}
+  {% if post.paperurl %}
+    <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; font-weight: 500;">{{ title }}</a>
+  {% else %}
+    <span style="font-weight: 500;">{{ title }}</span>
+  {% endif %}
   
-  <div class="publication-details" style="color: #666; font-size: 0.9em; line-height: 1.4;">
-    {% if post.citation %}
-      {% assign clean_citation = post.citation | replace: '<a href="', '' | replace: '">DOI:', ' (DOI:' | replace: '</a>', ')' | replace: '<i>', '' | replace: '</i>', '' | replace: '&quot;', '"' | replace: '&amp;', '&' %}
-      <div style="margin-bottom: 0.2em;">{{ clean_citation }}</div>
-    {% else %}
-      {% if post.venue %}
-        <span style="font-style: italic;">{{ post.venue }}</span>
-        {% if post.date %}
-          <span>, {{ post.date | date: "%Y" }}</span>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-    
-    <div class="publication-links" style="margin-top: 0.2em; font-size: 0.85em;">
-      {% if post.paperurl %}
-        {% if post.doi %}
-          <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[DOI]</a>
-        {% elsif post.arxiv %}
-          <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[arXiv]</a>
-        {% else %}
-          <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[PDF]</a>
-        {% endif %}
-      {% endif %}
-      {% if post.venue == 'Submitted' or post.venue == 'In preparation' %}
-        <span style="color: #666; font-style: italic;">{{ post.venue }}</span>
-      {% endif %}
-    </div>
-  </div>
+  {% comment %} Author and year {% endcomment %}
+  {% if author_year != '' %}
+    <span>. {{ author_year }}</span>
+  {% endif %}
+  
+  {% comment %} Venue {% endcomment %}
+  {% if post.venue %}
+    <span>. {{ post.venue }}</span>
+  {% endif %}
+  
+  {% comment %} Links - support both DOI and arXiv {% endcomment %}
+  {% assign has_doi = false %}
+  {% assign has_arxiv = false %}
+  
+  {% if post.doi %}
+    {% assign has_doi = true %}
+  {% elsif post.paperurl and post.paperurl contains 'doi.org' %}
+    {% assign has_doi = true %}
+  {% endif %}
+  
+  {% if post.arxiv %}
+    {% assign has_arxiv = true %}
+  {% elsif post.paperurl and post.paperurl contains 'arxiv.org' %}
+    {% assign has_arxiv = true %}
+  {% endif %}
+  
+  {% if has_doi or has_arxiv %}
+    <span>.</span>
+  {% endif %}
+  
+  {% comment %} Display DOI link {% endcomment %}
+  {% if post.doi %}
+    <a href="https://doi.org/{{ post.doi }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[DOI]</a>
+  {% elsif post.paperurl and post.paperurl contains 'doi.org' %}
+    <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[DOI]</a>
+  {% endif %}
+  
+  {% comment %} Display arXiv link {% endcomment %}
+  {% if post.arxiv %}
+    <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[arXiv]</a>
+  {% elsif post.paperurl and post.paperurl contains 'arxiv.org' %}
+    <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[arXiv]</a>
+  {% endif %}
+  
+  {% comment %} Display other paperurl if neither DOI nor arXiv {% endcomment %}
+  {% if post.paperurl and not has_doi and not has_arxiv %}
+    <span>.</span>
+    <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[PDF]</a>
+  {% endif %}
 </div>
 
