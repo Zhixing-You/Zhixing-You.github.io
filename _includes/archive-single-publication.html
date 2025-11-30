@@ -6,25 +6,23 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% comment %} Extract author and year from citation {% endcomment %}
-{% if post.citation %}
-  {% assign citation_no_html = post.citation | replace: '<a href="', '' | replace: '">', ' ' | replace: '</a>', '' | replace: '<i>', '' | replace: '</i>', '' | replace: '&quot;', '"' | replace: '&amp;', '&' %}
-  {% comment %} Find the part with author and year (before the title in quotes) {% endcomment %}
-  {% assign title_quoted = title | prepend: '"' | append: '"' %}
-  {% assign citation_before_title = citation_no_html | split: title_quoted | first | strip %}
-  {% comment %} Remove trailing period and clean up {% endcomment %}
-  {% assign author_year = citation_before_title | replace: '.', '' | strip %}
+{% comment %} Get author and year from author field {% endcomment %}
+{% if post.author %}
+  {% assign author_year = post.author %}
+{% elsif post.date %}
+  {% assign author_year = post.date | date: "(%Y)" %}
 {% else %}
   {% assign author_year = '' %}
-  {% if post.date %}
-    {% assign author_year = post.date | date: "(%Y)" %}
-  {% endif %}
 {% endif %}
 
 <div class="publication-item" style="font-size: 0.95em; line-height: 1.6;">
-  {% comment %} Title {% endcomment %}
+  {% comment %} Title with link (if available) {% endcomment %}
   {% if post.paperurl %}
     <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; font-weight: 500;">{{ title }}</a>
+  {% elsif post.doi %}
+    <a href="https://doi.org/{{ post.doi }}" target="_blank" style="color: #1a0dab; text-decoration: none; font-weight: 500;">{{ title }}</a>
+  {% elsif post.arxiv %}
+    <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" style="color: #1a0dab; text-decoration: none; font-weight: 500;">{{ title }}</a>
   {% else %}
     <span style="font-weight: 500;">{{ title }}</span>
   {% endif %}
@@ -34,9 +32,19 @@
     <span>. {{ author_year }}</span>
   {% endif %}
   
-  {% comment %} Venue {% endcomment %}
+  {% comment %} Venue - skip if it's redundant with author field {% endcomment %}
   {% if post.venue %}
-    <span>. {{ post.venue }}</span>
+    {% assign skip_venue = false %}
+    {% if post.author contains '(in preparation)' and post.venue == 'In preparation' %}
+      {% assign skip_venue = true %}
+    {% elsif post.author contains '(in preparation)' and post.venue contains 'preparation' %}
+      {% assign skip_venue = true %}
+    {% elsif post.author contains 'Submitted' and post.venue == 'Submitted' %}
+      {% assign skip_venue = true %}
+    {% endif %}
+    {% unless skip_venue %}
+      <span>. {{ post.venue }}</span>
+    {% endunless %}
   {% endif %}
   
   {% comment %} Links - support both DOI and arXiv {% endcomment %}
