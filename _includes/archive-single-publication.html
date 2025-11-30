@@ -35,12 +35,14 @@
   {% comment %} Venue - skip if it's redundant with author field {% endcomment %}
   {% if post.venue %}
     {% assign skip_venue = false %}
-    {% if post.author contains '(in preparation)' and post.venue == 'In preparation' %}
-      {% assign skip_venue = true %}
-    {% elsif post.author contains '(in preparation)' and post.venue contains 'preparation' %}
-      {% assign skip_venue = true %}
-    {% elsif post.author contains 'Submitted' and post.venue == 'Submitted' %}
-      {% assign skip_venue = true %}
+    {% if post.author %}
+      {% if post.author contains '(in preparation)' and post.venue == 'In preparation' %}
+        {% assign skip_venue = true %}
+      {% elsif post.author contains '(in preparation)' and post.venue contains 'preparation' %}
+        {% assign skip_venue = true %}
+      {% elsif post.author contains 'Submitted' and post.venue == 'Submitted' %}
+        {% assign skip_venue = true %}
+      {% endif %}
     {% endif %}
     {% unless skip_venue %}
       <span>. {{ post.venue }}</span>
