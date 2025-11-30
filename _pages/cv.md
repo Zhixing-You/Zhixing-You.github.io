@@ -20,16 +20,10 @@ Work experience
 ======
 * Postdoctoral researcher, Einstein Institute of Mathematics, The Hebrew University of Jerusalem, present
   * Advisor: Yair Hayut
-  * Research in set theory and mathematical logic
 
 * Postdoctoral researcher, Bar-Ilan University, Jul. 2022 – (previous position)
   * Advisor: Assaf Rinot
-  * Research in set theory and mathematical logic
 
-Projects
-======
-* Joint PhD student at University of Barcelona, China Scholarship Council (Oct. 2020 – Dec. 2021)
-  
 Skills
 ======
 * Set Theory
@@ -37,24 +31,6 @@ Skills
 * Forcing
 * Large Cardinals
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
 Service and leadership
 ======
 * Reviewer of Archive for Mathematical Logic
