@@ -1,11 +1,11 @@
 ---
-title: "A note on indecomposable ultrafilters"
+title: "Indecomposable cardinals"
 collection: publications
 category: manuscripts
-permalink: /publication/2025-12-01-indecomposable-ultrafilters
-excerpt: 'A note on indecomposable ultrafilters.'
+section: "Pure Mathematics"
+permalink: /publication/2025-12-01-indecomposable-cardinals
+excerpt: 'Joint work with Jiachen Yuan on indecomposable cardinals.'
 date: 2025-12-01
-venue: 'In preparation'
-citation: 'You, Z. (in preparation). &quot;A note on indecomposable ultrafilters.&quot;'
+venue: 'Preprint'
+citation: 'You, Z., & Yuan, J. (preprint). &quot;Indecomposable cardinals.&quot;'
 ---
-

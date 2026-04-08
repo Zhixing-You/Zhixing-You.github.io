@@ -2,6 +2,7 @@
 title: "How far is almost strong compactness from strong compactness"
 collection: publications
 category: manuscripts
+section: "Pure Mathematics"
 permalink: /publication/2025-01-01-almost-strong-compactness
 excerpt: 'Joint work with Jiachen Yuan on the relationship between almost strong compactness and strong compactness.'
 date: 2025-01-01

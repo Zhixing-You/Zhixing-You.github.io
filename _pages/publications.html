@@ -8,8 +8,11 @@ author_profile: true
 {% include base_path %}
 
 <div style="max-width: 900px;">
+
+  <h2 style="margin-bottom: 0.8em;">Pure Mathematics</h2>
   {% assign pub_count = 0 %}
-  {% for post in site.publications reversed %}
+  {% assign pure_pubs = site.publications | where: "section", "Pure Mathematics" | sort: "date" | reverse %}
+  {% for post in pure_pubs %}
     {% assign pub_count = pub_count | plus: 1 %}
     <div style="display: flex; margin-bottom: 0.6em; padding-bottom: 0.6em; border-bottom: 1px solid #e0e0e0;">
       <div style="min-width: 25px; margin-right: 8px; color: #666; font-weight: bold; padding-top: 2px;">{{ pub_count }}.</div>
@@ -18,7 +21,18 @@ author_profile: true
       </div>
     </div>
   {% endfor %}
+
+  <h2 style="margin-top: 1.5em; margin-bottom: 0.8em;">AI</h2>
+  {% assign ai_count = 0 %}
+  {% assign ai_pubs = site.publications | where: "section", "AI" | sort: "date" | reverse %}
+  {% for post in ai_pubs %}
+    {% assign ai_count = ai_count | plus: 1 %}
+    <div style="display: flex; margin-bottom: 0.6em; padding-bottom: 0.6em; border-bottom: 1px solid #e0e0e0;">
+      <div style="min-width: 25px; margin-right: 8px; color: #666; font-weight: bold; padding-top: 2px;">{{ ai_count }}.</div>
+      <div style="flex: 1;">
+        {% include archive-single-publication.html %}
+      </div>
+    </div>
+  {% endfor %}
+
 </div>
-
-
-

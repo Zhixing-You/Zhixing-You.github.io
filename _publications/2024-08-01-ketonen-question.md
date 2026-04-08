@@ -1,7 +1,8 @@
 ---
-title: "Ketonen's question and other sins"
+title: "Ketonen's question and other cardinal sins"
 collection: publications
 category: manuscripts
+section: "Pure Mathematics"
 permalink: /publication/2024-08-01-ketonen-question
 excerpt: "Joint work with Assaf Rinot and Jiachen Yuan on Ketonen's question."
 date: 2024-08-01

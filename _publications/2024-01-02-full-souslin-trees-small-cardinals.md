@@ -2,6 +2,7 @@
 title: "Full Souslin trees at small cardinals"
 collection: publications
 category: manuscripts
+section: "Pure Mathematics"
 permalink: /publication/2024-01-02-full-souslin-trees-small-cardinals
 excerpt: 'Joint work with Assaf Rinot and Shira Yadai on full Souslin trees at small cardinals.'
 date: 2024-01-02

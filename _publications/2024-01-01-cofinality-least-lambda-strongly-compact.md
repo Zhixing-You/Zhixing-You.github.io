@@ -2,6 +2,7 @@
 title: "On the cofinality of the least λ-strongly compact cardinal"
 collection: publications
 category: manuscripts
+section: "Pure Mathematics"
 permalink: /publication/2024-01-01-cofinality-least-lambda-strongly-compact
 excerpt: 'Joint work with Jiachen Yuan on the cofinality of the least λ-strongly compact cardinal.'
 date: 2024-01-01
