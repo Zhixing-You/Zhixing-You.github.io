@@ -29,9 +29,7 @@ Academic Appointments
 Research Interests
 ======
 * Set Theory
-* Mathematical Logic
-* Forcing
-* Large Cardinals
+* AI
 
 Professional Service
 ======
