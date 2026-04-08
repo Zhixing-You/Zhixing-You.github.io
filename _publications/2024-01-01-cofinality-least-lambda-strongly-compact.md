@@ -10,6 +10,6 @@ venue: 'Journal of Symbolic Logic'
 paperurl: 'https://doi.org/10.1017/jsl.2023.4'
 doi: '10.1017/jsl.2023.4'
 arxiv: '2202.01623'
-citation: 'You, Z., & Yuan, J. (2024). &quot;On the cofinality of the least λ-strongly compact cardinal.&quot; <i>Journal of Symbolic Logic</i>. <a href="https://doi.org/10.1017/jsl.2023.4">DOI: 10.1017/jsl.2023.4</a>'
+citation: 'You, Z., & Yuan, J. (2024). <i>Journal of Symbolic Logic</i>.'
 ---
 
