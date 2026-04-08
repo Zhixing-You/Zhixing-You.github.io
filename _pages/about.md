@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Zhixing You (游志兴). My research interests lie in set theory and mathematical logic, with a focus on large cardinals, forcing, and Suslin trees.
+I am Zhixing You (游志兴). My research interests lie in set theory and AI.
