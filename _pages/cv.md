@@ -14,7 +14,7 @@ redirect_from:
 Education
 ======
 * Ph.D. in Mathematics, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Sep. 2016 – Jun. 2022
-  * Joint program with University of Barcelona (Oct. 2020 – Dec. 2021)
+  * Visiting Ph.D. Student, University of Barcelona, Oct. 2020 – Dec. 2021
   * Advisors: Joan Bagaria, Liuzhen Wu and Jiachen Yuan
 * B.G.S. in Mathematics and Biology, Nankai University, Sep. 2012 – Jul. 2016
 
