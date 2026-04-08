@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[Download Full CV (PDF)](/files/cv.pdf)
+
 Education
 ======
 * Ph.D. in Mathematics, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Sep. 2016 – Jun. 2022
@@ -16,7 +18,7 @@ Education
   * Advisors: Joan Bagaria, Liuzhen Wu and Jiachen Yuan
 * B.G.S. in Mathematics and Biology, Nankai University, Sep. 2012 – Jul. 2016
 
-Work experience
+Academic Appointments
 ======
 * Postdoctoral researcher, Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Oct. 2025 – present
   * Advisor: Yair Hayut
@@ -24,13 +26,17 @@ Work experience
 * Postdoctoral researcher, Bar-Ilan University, Jul. 2022 – Sep. 2025
   * Advisor: Assaf Rinot
 
-Skills
+Research Interests
 ======
 * Set Theory
 * Mathematical Logic
 * Forcing
 * Large Cardinals
 
-Service and leadership
+Professional Service
 ======
-* Reviewer of Archive for Mathematical Logic
+* **Reviewer:** Archive for Mathematical Logic
+
+Publications
+======
+Please refer to the [Publications](/publications/) page for a full list.
