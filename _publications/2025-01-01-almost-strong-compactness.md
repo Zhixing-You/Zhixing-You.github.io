@@ -8,6 +8,7 @@ date: 2025-01-01
 venue: 'Journal of Mathematical Logic'
 paperurl: 'https://doi.org/10.1142/S0219061324500090'
 doi: '10.1142/S0219061324500090'
+arxiv: '2302.13171'
 citation: 'You, Z., & Yuan, J. (2025). &quot;How far is almost strong compactness from strong compactness.&quot; <i>Journal of Mathematical Logic</i>. <a href="https://doi.org/10.1142/S0219061324500090">DOI: 10.1142/S0219061324500090</a>'
 ---
 

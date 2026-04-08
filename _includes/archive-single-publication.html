@@ -38,6 +38,9 @@
           <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[PDF]</a>
         {% endif %}
       {% endif %}
+      {% if post.doi and post.arxiv %}
+        <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[arXiv]</a>
+      {% endif %}
       {% if post.venue == 'Submitted' or post.venue == 'In preparation' %}
         <span style="color: #666; font-style: italic;">{{ post.venue }}</span>
       {% endif %}
