@@ -7,44 +7,37 @@
 {% endif %}
 
 <div class="publication-item">
-  <div class="publication-title" style="font-size: 1.05em; font-weight: bold; margin-bottom: 0.2em;">
+  <div class="pub-title">
     {% if post.paperurl %}
-      <a href="{{ post.paperurl }}" style="color: #1a0dab; text-decoration: none;">{{ title }}</a>
+      <a href="{{ post.paperurl }}">{{ title }}</a>
     {% else %}
-      <a href="{{ base_path }}{{ post.url }}" style="color: #1a0dab; text-decoration: none;">{{ title }}</a>
+      <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
     {% endif %}
   </div>
-  
-  <div class="publication-details" style="color: #666; font-size: 0.9em; line-height: 1.4;">
+
+  <div class="pub-meta">
     {% if post.citation %}
-      {% assign clean_citation = post.citation | replace: '<a href="', '' | replace: '">DOI:', ' (DOI:' | replace: '</a>', ')' | replace: '<i>', '' | replace: '</i>', '' | replace: '&quot;', '"' | replace: '&amp;', '&' %}
-      <div style="margin-bottom: 0.2em;">{{ clean_citation }}</div>
-    {% else %}
-      {% if post.venue %}
-        <span style="font-style: italic;">{{ post.venue }}</span>
-        {% if post.date %}
-          <span>, {{ post.date | date: "%Y" }}</span>
-        {% endif %}
+      {{ post.citation }}
+    {% elsif post.venue %}
+      <em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+    {% endif %}
+  </div>
+
+  <div class="pub-links">
+    {% if post.paperurl %}
+      {% if post.doi %}
+        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">[DOI]</a>
+      {% elsif post.arxiv %}
+        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">[arXiv]</a>
+      {% else %}
+        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">[PDF]</a>
       {% endif %}
     {% endif %}
-    
-    <div class="publication-links" style="margin-top: 0.2em; font-size: 0.85em;">
-      {% if post.paperurl %}
-        {% if post.doi %}
-          <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[DOI]</a>
-        {% elsif post.arxiv %}
-          <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[arXiv]</a>
-        {% else %}
-          <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[PDF]</a>
-        {% endif %}
-      {% endif %}
-      {% if post.doi and post.arxiv %}
-        <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-right: 0.8em;">[arXiv]</a>
-      {% endif %}
-      {% if post.venue == 'Submitted' or post.venue == 'In preparation' %}
-        <span style="color: #666; font-style: italic;">{{ post.venue }}</span>
-      {% endif %}
-    </div>
+    {% if post.doi and post.arxiv %}
+      <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" class="pub-badge">[arXiv]</a>
+    {% endif %}
+    {% if post.venue == 'Submitted' or post.venue == 'In preparation' or post.venue == 'Preprint' %}
+      <span class="pub-status">{{ post.venue }}</span>
+    {% endif %}
   </div>
 </div>
-

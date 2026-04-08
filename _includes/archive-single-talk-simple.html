@@ -6,13 +6,10 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="talk-item" style="font-size: 0.95em; line-height: 1.6;">
-  {% comment %} Title {% endcomment %}
-  <span style="font-weight: 500;">{{ title }}</span>
-  
-  {% comment %} Venue, location, date {% endcomment %}
+<div class="talk-item">
+  <span class="talk-title">{{ title }}</span>
   {% if post.venue %}
-    <span>. <span style="font-style: italic;">{{ post.venue }}</span></span>
+    <span>. <em>{{ post.venue }}</em></span>
   {% endif %}
   {% if post.location %}
     <span>, {{ post.location }}</span>
@@ -20,40 +17,29 @@
   {% if post.date %}
     <span>, {{ post.date | date: "%B %Y" }}</span>
   {% endif %}
-  
-  {% comment %} Links - only show if valid {% endcomment %}
+
   {% assign has_paper = false %}
   {% assign has_event = false %}
-  
-  {% if post.paperurl %}
-    {% assign has_paper = true %}
-  {% endif %}
-  
+  {% if post.paperurl %}{% assign has_paper = true %}{% endif %}
   {% if post.link %}
-    {% comment %} Filter out generic/unhelpful links {% endcomment %}
     {% unless post.link contains 'mathunion.org' %}
       {% assign has_event = true %}
     {% endunless %}
   {% endif %}
-  
-  {% if has_paper or has_event %}
-    <span>.</span>
-  {% endif %}
-  
-  {% comment %} Display paper link {% endcomment %}
+
+  {% if has_paper or has_event %}<span>.</span>{% endif %}
+
   {% if post.paperurl %}
     {% if post.paperurl contains 'arxiv' %}
-      <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[arXiv]</a>
+      <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[arXiv]</a>
     {% elsif post.paperurl contains 'doi' %}
-      <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[DOI]</a>
+      <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[DOI]</a>
     {% else %}
-      <a href="{{ post.paperurl }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[Paper]</a>
+      <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[Paper]</a>
     {% endif %}
   {% endif %}
-  
-  {% comment %} Display event link (if valid) {% endcomment %}
+
   {% if has_event %}
-    <a href="{{ post.link }}" target="_blank" style="color: #1a0dab; text-decoration: none; margin-left: 0.3em;">[Event]</a>
+    <a href="{{ post.link }}" target="_blank" class="talk-badge">[Event]</a>
   {% endif %}
 </div>
-

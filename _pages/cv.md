@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download Full CV (PDF)](/files/cv.pdf)
+<a href="/files/cv.pdf" class="btn">Download Full CV (PDF)</a>
 
 Education
 ======
@@ -28,8 +28,8 @@ Academic Appointments
 
 Research Interests
 ======
-* Set Theory
-* AI
+* **Set Theory** — Large cardinals, forcing, Souslin trees, compactness phenomena
+* **AI** — Memory architectures for language model agents
 
 Professional Service
 ======

@@ -35,7 +35,7 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Dark theme for the site */
 html[data-theme="dark"] {
-    --global-base-color                 : #{$background};
+    --global-base-color                 : #63b3ed;
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$background};
     --global-border-color               : #{$light-gray};
@@ -47,8 +47,29 @@ html[data-theme="dark"] {
     --global-link-color-hover           : #{$link-dark};
     --global-link-color-visited         : #{$link-light};
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};
+    --global-masthead-link-color-hover  : #63b3ed;
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$background-lighter};
+
+    /* Accent */
+    --accent-color                      : #63b3ed;
+    --accent-color-hover                : #90cdf4;
+    --accent-color-light                : #2a3a4a;
+
+    /* Badges */
+    --badge-bg-color                    : #2a3a4a;
+    --badge-text-color                  : #90cdf4;
+    --badge-border-color                : #3a5068;
+
+    /* Section rule */
+    --section-rule-color                : #3a4a5a;
+
+    /* Cards */
+    --card-bg-color                     : #3a3a3a;
+    --card-border-color                 : #63b3ed;
+    --card-shadow                       : 0 2px 10px rgba(0, 0, 0, 0.35);
+
+    /* Sidebar avatar */
+    --avatar-border-color               : #4a5568;
 }

@@ -28,7 +28,7 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Default light theme for the site */
 :root {
-    --global-base-color                 : #{$gray};
+    --global-base-color                 : #1a365d;
     --global-bg-color                   : #fff;
     --global-footer-bg-color            : #f2f3f3;
     --global-border-color               : #{$lighter-gray};
@@ -36,12 +36,33 @@ $sidebar-screen-min-width   : 1024px;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
+    --global-link-color                 : #1a365d;
+    --global-link-color-hover           : #2a4a7f;
+    --global-link-color-visited         : #2c5282;
+    --global-masthead-link-color        : #2d3748;
+    --global-masthead-link-color-hover  : #1a365d;
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
+
+    /* Accent */
+    --accent-color                      : #1a365d;
+    --accent-color-hover                : #2a4a7f;
+    --accent-color-light                : #e8eef5;
+
+    /* Badges ([DOI] / [arXiv]) */
+    --badge-bg-color                    : #e8eef5;
+    --badge-text-color                  : #1a365d;
+    --badge-border-color                : #c3d1e3;
+
+    /* Section rule */
+    --section-rule-color                : #d0d8e4;
+
+    /* Cards */
+    --card-bg-color                     : #fff;
+    --card-border-color                 : #1a365d;
+    --card-shadow                       : 0 2px 10px rgba(0, 0, 0, 0.07);
+
+    /* Sidebar avatar */
+    --avatar-border-color               : #d0d8e4;
 }
