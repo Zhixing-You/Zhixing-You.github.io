@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am Zhixing You (游志兴), a postdoctoral researcher at the [Einstein Institute of Mathematics](https://mathematics.huji.ac.il/), The Hebrew University of Jerusalem, working with Yair Hayut. My research lies in mathematical logic, primarily combinatorial set theory — including large cardinals, forcing, Souslin trees, and compactness phenomena. I am also interested in AI, particularly memory systems for language model agents.
+I am Zhixing You (游志兴), a postdoctoral researcher at the [Einstein Institute of Mathematics](https://mathematics.huji.ac.il/), The Hebrew University of Jerusalem, working with Yair Hayut. My research lies in set theory — including large cardinals, forcing, and compactness phenomena. I am also interested in AI, particularly AI4Math.
 
 <div class="news-card">
   <h2>News</h2>

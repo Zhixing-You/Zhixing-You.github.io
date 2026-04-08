@@ -28,8 +28,8 @@ Academic Appointments
 
 Research Interests
 ======
-* **Set Theory** — Large cardinals, forcing, Souslin trees, compactness phenomena
-* **AI** — Memory architectures for language model agents
+* **Set Theory** — Large cardinals, forcing, and compactness phenomena
+* **AI** — Applying AI to mathematical research (AI4Math)
 
 Professional Service
 ======

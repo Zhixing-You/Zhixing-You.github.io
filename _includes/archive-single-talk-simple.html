@@ -18,18 +18,7 @@
     <span>, {{ post.date | date: "%B %Y" }}</span>
   {% endif %}
 
-  {% assign has_paper = false %}
-  {% assign has_event = false %}
-  {% if post.paperurl %}{% assign has_paper = true %}{% endif %}
-  {% if post.link %}
-    {% unless post.link contains 'mathunion.org' %}
-      {% assign has_event = true %}
-    {% endunless %}
-  {% endif %}
-
-  {% if has_paper or has_event %}<span>.</span>{% endif %}
-
-  {% if post.paperurl %}
+  {% if post.paperurl %}<span>.</span>
     {% if post.paperurl contains 'arxiv' %}
       <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[arXiv]</a>
     {% elsif post.paperurl contains 'doi' %}
@@ -37,9 +26,5 @@
     {% else %}
       <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[Paper]</a>
     {% endif %}
-  {% endif %}
-
-  {% if has_event %}
-    <a href="{{ post.link }}" target="_blank" class="talk-badge">[Event]</a>
   {% endif %}
 </div>
