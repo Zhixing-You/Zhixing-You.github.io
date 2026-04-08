@@ -1,30 +1,11 @@
 {% include base_path %}
 
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
+{%- if post.id -%}
+  {%- assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" -%}
+{%- else -%}
+  {%- assign title = post.title -%}
+{%- endif -%}
 
 <div class="talk-item">
-  <span class="talk-title">{{ title }}</span>
-  {% if post.venue %}
-    <span>. <em>{{ post.venue }}</em></span>
-  {% endif %}
-  {% if post.location %}
-    <span>, {{ post.location }}</span>
-  {% endif %}
-  {% if post.date %}
-    <span>, {{ post.date | date: "%B %Y" }}</span>
-  {% endif %}
-
-  {% if post.paperurl %}<span>.</span>
-    {% if post.paperurl contains 'arxiv' %}
-      <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[arXiv]</a>
-    {% elsif post.paperurl contains 'doi' %}
-      <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[DOI]</a>
-    {% else %}
-      <a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[Paper]</a>
-    {% endif %}
-  {% endif %}
+  <span class="talk-title">{{ title }}</span>{%- if post.venue -%}<span>. <em>{{ post.venue }}</em></span>{%- endif -%}{%- if post.location -%}<span>, {{ post.location }}</span>{%- endif -%}{%- if post.date -%}<span>, {{ post.date | date: "%B %Y" }}</span>{%- endif -%}{%- if post.paperurl -%}<span>. </span>{%- if post.paperurl contains 'arxiv' -%}<a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[arXiv]</a>{%- elsif post.paperurl contains 'doi' -%}<a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[DOI]</a>{%- else -%}<a href="{{ post.paperurl }}" target="_blank" class="talk-badge">[Paper]</a>{%- endif -%}{%- endif %}
 </div>

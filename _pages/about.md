@@ -13,7 +13,7 @@ I am Zhixing You (游志兴), a postdoctoral researcher at the [Einstein Institu
 <div class="news-card">
   <h2>News</h2>
   <ul>
-    <li><strong>Apr 2026</strong> — <em>A new model in which all C-sequences are trivial</em> published online in <em>Journal of Symbolic Logic</em>.</li>
-    <li><strong>2025</strong> — <em>The vanishing levels of a tree</em> published in <em>Canadian Journal of Mathematics</em>.</li>
+    <li><strong>Apr 2026</strong> — <a href="https://arxiv.org/abs/2504.06794" target="_blank"><em>A new model in which all C-sequences are trivial</em></a> published online in <em>Journal of Symbolic Logic</em>.</li>
+    <li><strong>2025</strong> — <a href="https://arxiv.org/abs/2309.03821" target="_blank"><em>The vanishing levels of a tree</em></a> published in <em>Canadian Journal of Mathematics</em>.</li>
   </ul>
 </div>

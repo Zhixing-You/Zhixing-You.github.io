@@ -17,7 +17,7 @@
 
   <div class="pub-meta">
     {% if post.citation %}
-      {{ post.citation }}
+      {{ post.citation | replace: 'You, Z.', '<strong>You, Z.</strong>' | replace: 'Zhixing You', '<strong>Zhixing You</strong>' }}
     {% elsif post.venue %}
       <em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
     {% endif %}
