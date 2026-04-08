@@ -6,6 +6,6 @@ section: "Pure Mathematics"
 permalink: /publication/2025-12-01-indecomposable-cardinals
 excerpt: 'Joint work with Jiachen Yuan on indecomposable cardinals.'
 date: 2025-12-01
-venue: 'Preprint'
+venue: ''
 citation: 'You, Z., & Yuan, J. (preprint).'
 ---
