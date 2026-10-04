@@ -65,6 +65,9 @@ html[data-theme="dark"] {
     /* Section rule */
     --section-rule-color                : #3a4a5a;
 
+    /* Publication metadata (authors, venue) */
+    --meta-text-color                   : #{$light-gray};
+
     /* Cards */
     --card-bg-color                     : #3a3a3a;
     --card-border-color                 : #63b3ed;

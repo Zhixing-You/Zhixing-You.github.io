@@ -13,6 +13,7 @@ I am Zhixing You (游志兴), a postdoctoral researcher at the [Einstein Institu
 <div class="news-card">
   <h2>News</h2>
   <ul>
+    <li><strong>2026</strong> — <a href="https://arxiv.org/abs/2603.18631" target="_blank"><em>D-Mem: A Dual-Process Memory System for LLM Agents</em></a> accepted at <em>REALM 2026</em> @ EMNLP 2026.</li>
     <li><strong>Apr 2026</strong> — <a href="https://arxiv.org/abs/2504.06794" target="_blank"><em>A new model in which all C-sequences are trivial</em></a> published online in <em>Journal of Symbolic Logic</em>.</li>
     <li><strong>2025</strong> — <a href="https://arxiv.org/abs/2309.03821" target="_blank"><em>The vanishing levels of a tree</em></a> published in <em>Canadian Journal of Mathematics</em>.</li>
   </ul>

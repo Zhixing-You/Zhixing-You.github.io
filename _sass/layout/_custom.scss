@@ -92,7 +92,7 @@
 }
 
 .pub-meta {
-  color: var(--global-text-color-light);
+  color: var(--meta-text-color);
   font-size: 0.875em;
   margin-top: 0.15em;
   margin-bottom: 0.25em;
@@ -102,17 +102,18 @@
   margin-top: 0.25em;
 }
 
-.pub-badge {
+a.pub-badge {
   display: inline-block;
   margin-right: 0.4em;
   margin-top: 0.2em;
-  padding: 0.1em 0.5em;
-  font-size: 0.78em;
+  padding: 0.15em 0.7em;
+  font-size: 0.75em;
+  letter-spacing: 0.02em;
   font-weight: $weight-medium;
   color: var(--badge-text-color);
   background: var(--badge-bg-color);
   border: 1px solid var(--badge-border-color);
-  border-radius: 3px;
+  border-radius: 999px;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
 
@@ -185,7 +186,6 @@
 .news-card {
   box-sizing: border-box;
   width: 100%;
-  max-width: 680px;
   margin-top: 2em;
   background: var(--card-bg-color);
   border-left: 4px solid var(--card-border-color);
@@ -220,7 +220,26 @@
    Sidebar avatar
    -------------------------------------------------------------------------- */
 .author__avatar img {
-  border-color: var(--avatar-border-color);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 60%;
+
+  @include breakpoint($large) {
+    width: 175px;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 0 4px var(--avatar-border-color);
+  }
+}
+
+/* Let long sidebar entries (e.g. employer) wrap instead of being cut off */
+.sidebar .author__urls li {
+  @include breakpoint($large) {
+    display: flex;
+    align-items: baseline;
+    white-space: normal;
+    line-height: 1.4;
+  }
 }
 
 /* --------------------------------------------------------------------------

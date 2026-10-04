@@ -26,15 +26,15 @@
   <div class="pub-links">
     {% if post.paperurl %}
       {% if post.doi %}
-        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">[DOI]</a>
+        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">DOI</a>
       {% elsif post.arxiv %}
-        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">[arXiv]</a>
+        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">arXiv</a>
       {% else %}
-        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">[PDF]</a>
+        <a href="{{ post.paperurl }}" target="_blank" class="pub-badge">PDF</a>
       {% endif %}
     {% endif %}
     {% if post.doi and post.arxiv %}
-      <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" class="pub-badge">[arXiv]</a>
+      <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" class="pub-badge">arXiv</a>
     {% endif %}
     {% if post.venue == 'Submitted' or post.venue == 'In preparation' or post.venue == 'Preprint' %}
       <span class="pub-status">{{ post.venue }}</span>
